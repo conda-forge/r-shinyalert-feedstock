@@ -15,7 +15,7 @@ source:
 build:
   noarch: generic
   merge_build_host: True  # [win]
-  number: 1001
+  number: 1002
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -47,6 +47,7 @@ about:
     images, OK/Cancel buttons, an input to get a response from the user, and many more
     customizable options.
   license_family: MIT
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
