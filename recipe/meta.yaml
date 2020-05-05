@@ -47,6 +47,7 @@ about:
     images, OK/Cancel buttons, an input to get a response from the user, and many more
     customizable options.
   license_family: MIT
+  license_file:	LICENSE
 
 extra:
   recipe-maintainers:
