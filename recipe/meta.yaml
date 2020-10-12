@@ -1,4 +1,4 @@
-{% set version = '1.0' %}
+{% set version = '2.0.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,13 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/shinyalert_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/shinyalert/shinyalert_{{ version }}.tar.gz
-  sha256: b1034248e60c55886cdf961abdc0ebb9aec4c4eea3a6ad8d7e813bc3ffbaf559
+  sha256: a7f2441282bcd6cde5e14d84212a2b4db27774af7e2edc1062cbce6d9615692c
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1002
   noarch: generic
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -41,7 +40,9 @@ test:
     - "\"%R%\" -e \"library('shinyalert')\""  # [win]
 
 about:
-  home: https://github.com/daattali/shinyalert https://daattali.com/shiny/shinyalert-demo/
+  home: https://cran.r-project.org/package=shinyalert
+  dev_url: https://github.com/daattali/shinyalert
+  doc_url: https://daattali.com/shiny/shinyalert-demo/
   license: MIT
   summary: Easily create pretty popup messages (modals) in 'Shiny'. A modal can contain text,
     images, OK/Cancel buttons, an input to get a response from the user, and many more
