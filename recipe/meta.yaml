@@ -27,11 +27,13 @@ requirements:
     - r-base
     - r-digest
     - r-shiny >=1.0.4
+    - r-uuid
     - pandoc
   run:
     - r-base
     - r-digest
     - r-shiny >=1.0.4
+    - r-uuid
     - pandoc
 
 test:
