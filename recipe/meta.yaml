@@ -14,24 +14,27 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  noarch: generic
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-
+    - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-digest
+    - r-htmltools
+    - r-knitr
     - r-shiny >=1.0.4
     - r-uuid
     - pandoc
   run:
     - r-base
-    - r-digest
+    - r-htmltools
+    - r-knitr
     - r-shiny >=1.0.4
     - r-uuid
     - pandoc
@@ -48,7 +51,9 @@ about:
   license: MIT
   summary: Easily create pretty popup messages (modals) in 'Shiny'. A modal can contain text, images, OK/Cancel buttons, an input to get a response from the user, and many more customizable options.
   license_family: MIT
-  license_file: LICENSE
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
+    - LICENSE
 
 extra:
   recipe-maintainers:
