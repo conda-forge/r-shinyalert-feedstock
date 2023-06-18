@@ -1,11 +1,11 @@
-About r-shinyalert
-==================
+About r-shinyalert-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-shinyalert-feedstock/blob/main/LICENSE.txt)
 
 Home: https://cran.r-project.org/package=shinyalert
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-shinyalert-feedstock/blob/main/LICENSE.txt)
 
 Summary: Easily create pretty popup messages (modals) in 'Shiny'. A modal can contain text, images, OK/Cancel buttons, an input to get a response from the user, and many more customizable options.
 
